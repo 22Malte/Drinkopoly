@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #ff6a00, #ff3c00);
+  color: white;
+  overflow: hidden;
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+}
+
+.screen.active {
+  display: block;
+}
+
+#setup-screen h1 {
+  text-align: center;
+}
+
+#player-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.player-row {
+  display: flex;
+  gap: 10px;
+}
+
+.player-row input {
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.player-row input.error {
+  border-color: red;
+}
+
+#top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#board {
+  height: 60vh;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px;
+}
+
+#dice-area {
+  text-align: center;
+}

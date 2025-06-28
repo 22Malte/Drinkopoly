@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drinkopoly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="setup-screen" class="screen active">
+    <h1>🎲 Drinkopoly 🎉</h1>
+    <form id="player-form">
+      <div id="player-inputs"></div>
+      <button type="button" id="add-player">+ Spieler hinzufügen</button>
+      <button type="submit">Spiel starten</button>
+    </form>
+  </div>
+
+  <div id="game-screen" class="screen">
+    <div id="top-bar">
+      <div id="player-order"></div>
+      <button id="open-map">🗺️</button>
+      <button id="settings">⚙️</button>
+    </div>
+    <div id="board">
+      <!-- Das Spielfeld wird hier dynamisch eingefügt -->
+    </div>
+    <div id="dice-area">
+      <button id="roll-dice">🎲 Würfeln</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
