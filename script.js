@@ -81,3 +81,73 @@ document.addEventListener("DOMContentLoaded", () => {
   createPlayerInput();
   createPlayerInput();
 });
+
+
+function createBoard(players) {
+  const board = document.getElementById("board");
+  board.innerHTML = "";
+  const totalFields = 40;
+
+  for (let i = 0; i < totalFields; i++) {
+    const field = document.createElement("div");
+    field.classList.add("board-field");
+    field.textContent = i;
+    board.appendChild(field);
+  }
+
+  // Spielerpositionen vorbereiten
+  players.forEach(p => p.position = 0);
+  updatePlayerTokens(players);
+}
+
+function updatePlayerTokens(players) {
+  const fields = document.querySelectorAll(".board-field");
+  fields.forEach(f => f.innerHTML = "");
+
+  players.forEach(p => {
+    const token = document.createElement("div");
+    token.classList.add("player-token");
+    token.textContent = p.emoji;
+    fields[p.position].appendChild(token);
+  });
+}
+
+function rollDice() {
+  return Math.floor(Math.random() * 6) + 1;
+}
+
+let currentPlayerIndex = 0;
+let players = [];
+
+function startGame() {
+  players = JSON.parse(localStorage.getItem("drinkopoly_players")) || [];
+  createBoard(players);
+
+  const diceButton = document.getElementById("roll-dice");
+  diceButton.addEventListener("click", () => {
+    const player = players[currentPlayerIndex];
+    const roll = rollDice();
+    player.position = (player.position + roll) % 40;
+    updatePlayerTokens(players);
+
+    // TODO: Hier Feldaktion auslösen
+
+    currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
+    highlightCurrentPlayer();
+  });
+
+  highlightCurrentPlayer();
+}
+
+function highlightCurrentPlayer() {
+  const orderBar = document.getElementById("player-order");
+  Array.from(orderBar.children).forEach((el, index) => {
+    if (index === currentPlayerIndex) {
+      el.style.border = "2px solid white";
+    } else {
+      el.style.border = "none";
+    }
+  });
+}
+
+startGame();

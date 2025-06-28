@@ -55,3 +55,23 @@ body {
 #dice-area {
   text-align: center;
 }
+
+
+.board-field {
+  width: calc(100% / 10);
+  height: 60px;
+  float: left;
+  border: 1px solid white;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.player-token {
+  position: absolute;
+  font-size: 20px;
+  top: 2px;
+  left: 2px;
+}
