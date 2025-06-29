@@ -1,1 +1,11 @@
-{"ereignis": [], "gemeinschaft": []}
+
+{
+  "ereignis": [
+    "Trinke einen Shot!",
+    "Gib einen Shot weiter!"
+  ],
+  "gemeinschaft": [
+    "Der kleinste Spieler trinkt.",
+    "Mische deinem Nachbarn ein Getränk."
+  ]
+}

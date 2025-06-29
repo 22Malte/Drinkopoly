@@ -1,1 +1,13 @@
-body { background: linear-gradient(orange, red); color: white; }
+body {
+    margin: 0;
+    background: linear-gradient(orange, red);
+    font-family: sans-serif;
+    color: white;
+}
+#app {
+    padding: 20px;
+}
+button {
+    padding: 10px;
+    font-size: 1rem;
+}
