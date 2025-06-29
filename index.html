@@ -3,45 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Drinkopoly v0.4</title>
+  <title>Drinkopoly Minimal</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="setup-screen" class="screen active">
+  <div id="setup-screen">
     <h1>🍻 Drinkopoly</h1>
     <form id="player-form">
-      <div id="player-inputs"></div>
-      <button type="button" id="add-player">+ Spieler</button>
+      <div class="player-row">
+        <input placeholder="Name" required />
+        <input placeholder="Emoji" required />
+      </div>
+      <div class="player-row">
+        <input placeholder="Name" required />
+        <input placeholder="Emoji" required />
+      </div>
       <button type="submit">Spiel starten</button>
     </form>
-    <button id="clear-players">🚫 Spieler löschen</button>
   </div>
 
-  <div id="game-screen" class="screen">
-    <div id="top-bar">
-      <div id="player-order"></div>
-    </div>
-    <div id="board-container">
-      <div id="board"></div>
-    </div>
-    <div id="dice-area">
-      <div id="dice">
-        <div class="die" id="die1">🎲</div>
-        <div class="die" id="die2">🎲</div>
-      </div>
-      <button id="roll-dice">🎲 Würfeln</button>
-    </div>
-  </div>
-
-  <div id="popup" class="popup hidden">
-    <div class="popup-content">
-      <h2 id="popup-title"></h2>
-      <p id="popup-text"></p>
-      <button id="popup-close"><span id="popup-progress">✔️ Fertig</span></button>
-    </div>
-  </div>
-
-  <div id="version-label">v0.4.2-beta</div>
+  <div id="version-label">v0.4.3-reset</div>
   <script src="script.js"></script>
 </body>
 </html>
