@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Drinkopoly Minimal</title>
+  <title>Drinkopoly v0.5</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,18 +11,34 @@
     <h1>🍻 Drinkopoly</h1>
     <form id="player-form">
       <div class="player-row">
-        <input placeholder="Name" required />
-        <input placeholder="Emoji" required />
+        <input placeholder="Name" id="name1" required />
+        <input placeholder="Emoji" id="emoji1" required />
       </div>
       <div class="player-row">
-        <input placeholder="Name" required />
-        <input placeholder="Emoji" required />
+        <input placeholder="Name" id="name2" required />
+        <input placeholder="Emoji" id="emoji2" required />
       </div>
       <button type="submit">Spiel starten</button>
     </form>
   </div>
 
-  <div id="version-label">v0.4.3-reset</div>
+  <div id="game-screen" class="hidden">
+    <div id="top-bar">
+      <div id="player-order"></div>
+    </div>
+    <div id="board-container">
+      <div id="board"></div>
+    </div>
+    <div id="dice-area">
+      <div id="dice">
+        <div class="die" id="die1">🎲</div>
+        <div class="die" id="die2">🎲</div>
+      </div>
+      <button id="roll-dice">🎲 Würfeln</button>
+    </div>
+  </div>
+
+  <div id="version-label">v0.5-beta</div>
   <script src="script.js"></script>
 </body>
 </html>
