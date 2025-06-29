@@ -7,10 +7,41 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Spielversion unten links -->
-  <div id="version-label">v0.4-beta</div>
+  <div id="setup-screen" class="screen active">
+    <h1>🍻 Drinkopoly</h1>
+    <form id="player-form">
+      <div id="player-inputs"></div>
+      <button type="button" id="add-player">+ Spieler</button>
+      <button type="submit">Spiel starten</button>
+    </form>
+    <button id="clear-players">🚫 Spieler löschen</button>
+  </div>
 
-  <!-- Rest des Spiels wird hier später ergänzt -->
+  <div id="game-screen" class="screen">
+    <div id="top-bar">
+      <div id="player-order"></div>
+    </div>
+    <div id="board-container">
+      <div id="board"></div>
+    </div>
+    <div id="dice-area">
+      <div id="dice">
+        <div class="die" id="die1">🎲</div>
+        <div class="die" id="die2">🎲</div>
+      </div>
+      <button id="roll-dice">🎲 Würfeln</button>
+    </div>
+  </div>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <h2 id="popup-title"></h2>
+      <p id="popup-text"></p>
+      <button id="popup-close"><span id="popup-progress">✔️ Fertig</span></button>
+    </div>
+  </div>
+
+  <div id="version-label">v0.4-beta</div>
   <script src="script.js"></script>
 </body>
 </html>
