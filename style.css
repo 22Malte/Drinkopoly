@@ -4,13 +4,14 @@ body {
   font-family: sans-serif;
   background: linear-gradient(135deg, #ff6a00, #ff3c00);
   color: white;
-  padding: 20px;
+  text-align: center;
 }
 
 .player-row {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
+  justify-content: center;
 }
 
 .player-row input {
@@ -31,11 +32,16 @@ body {
   display: none;
 }
 
+#logo-top img {
+  max-width: 200px;
+  margin: 20px auto 10px;
+}
+
 #board-container {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 #board {
@@ -45,6 +51,8 @@ body {
   width: 90vmin;
   height: 90vmin;
   background: #222;
+  position: relative;
+  z-index: 1;
 }
 
 .board-field {
@@ -70,4 +78,52 @@ body {
   font-size: 16px;
   display: inline-block;
   line-height: 1;
+}
+
+#center-elements {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+#deck-community, #deck-event {
+  font-size: 12px;
+  background: rgba(255,255,255,0.1);
+  padding: 6px;
+  border-radius: 6px;
+}
+
+#center-logo img {
+  max-width: 120px;
+  opacity: 0.8;
+}
+
+#dice-area {
+  margin-top: 30px;
+}
+
+#dice {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+#roll-dice {
+  font-size: 20px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #ff3c00;
+  cursor: pointer;
 }

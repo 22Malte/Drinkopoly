@@ -48,15 +48,21 @@ function initBoard() {
 function rollDice() {
   const die1 = Math.floor(Math.random() * 6) + 1;
   const die2 = Math.floor(Math.random() * 6) + 1;
-  document.getElementById("die1").textContent = ["","⚀","⚁","⚂","⚃","⚄","⚅"][die1];
-  document.getElementById("die2").textContent = ["","⚀","⚁","⚂","⚃","⚄","⚅"][die2];
-  const total = die1 + die2;
 
-  const p = players[current];
-  p.position = (p.position + total) % 40;
-  updateTokens();
+  const diceMap = ["","⚀","⚁","⚂","⚃","⚄","⚅"];
+  document.getElementById("die1").textContent = "🎲";
+  document.getElementById("die2").textContent = "🎲";
+  setTimeout(() => {
+    document.getElementById("die1").textContent = diceMap[die1];
+    document.getElementById("die2").textContent = diceMap[die2];
 
-  current = (current + 1) % players.length;
+    const total = die1 + die2;
+    const p = players[current];
+    p.position = (p.position + total) % 40;
+    updateTokens();
+
+    current = (current + 1) % players.length;
+  }, 500);
 }
 
 function updateTokens() {

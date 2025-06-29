@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Drinkopoly v0.5</title>
+  <title>Drinkopoly v0.6</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -23,11 +23,14 @@
   </div>
 
   <div id="game-screen" class="hidden">
-    <div id="top-bar">
-      <div id="player-order"></div>
-    </div>
+    <div id="logo-top"><img src="logo.png" alt="Drinkopoly Logo" /></div>
     <div id="board-container">
       <div id="board"></div>
+      <div id="center-elements">
+        <div id="deck-community">🟦<br>Gemeinschaft</div>
+        <div id="deck-event">🟥<br>Ereignis</div>
+        <div id="center-logo"><img src="logo.png" alt="Drinkopoly Mitte" /></div>
+      </div>
     </div>
     <div id="dice-area">
       <div id="dice">
@@ -38,7 +41,7 @@
     </div>
   </div>
 
-  <div id="version-label">v0.5-beta</div>
+  <div id="version-label">v0.6-beta</div>
   <script src="script.js"></script>
 </body>
 </html>
