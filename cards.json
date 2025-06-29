@@ -1,18 +1,1 @@
-{
-  "ereignis": [
-    {
-      "titel": "Tauschrausch",
-      "text": "{{spieler1}} und {{spieler2}} tauschen Plätze!"
-    },
-    {
-      "titel": "Pech",
-      "text": "{{spieler1}} muss 1 Shot trinken."
-    }
-  ],
-  "gemeinschaft": [
-    {
-      "titel": "Zusammenhalt",
-      "text": "Alle außer {{spieler1}} trinken 1 Schluck."
-    }
-  ]
-}
+{}
