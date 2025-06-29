@@ -1,4 +1,43 @@
 
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #ff6a00, #ff3c00);
+  color: white;
+  overflow: hidden;
+}
+
+#board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.board-field {
+  width: calc(100% / 10);
+  height: 60px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.player-token {
+  position: absolute;
+  font-size: 20px;
+  top: 2px;
+  left: 2px;
+}
+
+#player-order {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
 .popup {
   position: fixed;
   top: 0;

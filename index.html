@@ -10,17 +10,19 @@
   <div id="game-screen">
     <div id="player-order"></div>
     <div id="board"></div>
-    <button onclick="testCardPopup()">🎴 Karte testen</button>
+    <div id="dice-area">
+      <button id="roll-dice">🎲 Würfeln</button>
+    </div>
   </div>
-  
-<!-- Karten-Popup -->
-<div id="card-popup" class="popup hidden">
-  <div class="popup-content">
-    <h2 id="card-title">Kartentitel</h2>
-    <p id="card-text">Kartentext</p>
-    <button id="card-done">✔️ Fertig</button>
+
+  <!-- Karten-Popup -->
+  <div id="card-popup" class="popup hidden">
+    <div class="popup-content">
+      <h2 id="card-title">Kartentitel</h2>
+      <p id="card-text">Kartentext</p>
+      <button id="card-done">✔️ Fertig</button>
+    </div>
   </div>
-</div>
 
   <script src="script.js"></script>
 </body>
