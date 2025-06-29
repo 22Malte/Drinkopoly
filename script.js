@@ -6,9 +6,12 @@ let ownedStations = {};
 document.addEventListener("DOMContentLoaded", () => {
   const saved = JSON.parse(localStorage.getItem("drinkopoly_players") || "[]");
   const inputs = document.getElementById("player-inputs");
-
-  saved.forEach(p => addInput(p.name, p.emoji));
-  if (saved.length === 0) addInput(); addInput();
+  if (saved.length === 0) {
+    addInput();
+    addInput();
+  } else {
+    saved.forEach(p => addInput(p.name, p.emoji));
+  }
 
   document.getElementById("add-player").onclick = () => addInput();
   document.getElementById("clear-players").onclick = () => { localStorage.removeItem("drinkopoly_players"); location.reload(); };
