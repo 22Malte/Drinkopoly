@@ -95,11 +95,34 @@ function startGame(players) {
   updateTokens(players);
 
   document.getElementById("roll-dice").addEventListener("click", () => {
-    const roll = Math.floor(Math.random() * 6) + 1;
-    players[currentPlayer].position = (players[currentPlayer].position + roll) % 40;
-    updateTokens(players);
-    currentPlayer = (currentPlayer + 1) % players.length;
+    const roll1 = Math.floor(Math.random() * 6) + 1;
+    const roll2 = Math.floor(Math.random() * 6) + 1;
+    animateDice(roll1, roll2);
+
+    setTimeout(() => {
+      const move = roll1 + roll2;
+      players[currentPlayer].position = (players[currentPlayer].position + move) % 40;
+      updateTokens(players);
+      currentPlayer = (currentPlayer + 1) % players.length;
+    }, 400);
   });
+}
+
+function animateDice(r1, r2) {
+  const d1 = document.getElementById("die1");
+  const d2 = document.getElementById("die2");
+  d1.classList.remove("roll");
+  d2.classList.remove("roll");
+  void d1.offsetWidth;
+  void d2.offsetWidth;
+  d1.classList.add("roll");
+  d2.classList.add("roll");
+  d1.textContent = diceEmoji(r1);
+  d2.textContent = diceEmoji(r2);
+}
+
+function diceEmoji(n) {
+  return ["", "⚀", "⚁", "⚂", "⚃", "⚄", "⚅"][n];
 }
 
 function updateTokens(players) {
