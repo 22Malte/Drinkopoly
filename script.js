@@ -1,4 +1,12 @@
+
 function rollDice() {
-    const dice = Math.floor(Math.random() * 6) + 1;
-    document.getElementById('dice').innerText = `Du hast eine ${dice} gewürfelt`;
+  const die1 = Math.floor(Math.random() * 6) + 1;
+  const die2 = Math.floor(Math.random() * 6) + 1;
+  document.getElementById('dice1').textContent = getDieFace(die1);
+  document.getElementById('dice2').textContent = getDieFace(die2);
+  document.getElementById('dice-result').textContent = `Du hast eine ${die1 + die2} gewürfelt`;
+}
+
+function getDieFace(n) {
+  return ['⚀','⚁','⚂','⚃','⚄','⚅'][n-1];
 }

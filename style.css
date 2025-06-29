@@ -1,13 +1,69 @@
+
 body {
-    margin: 0;
-    background: linear-gradient(orange, red);
-    font-family: sans-serif;
-    color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, orange, red);
+  color: white;
+  text-align: center;
 }
-#app {
-    padding: 20px;
+
+.header {
+  padding: 20px;
 }
+
+#board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#game-board {
+  width: 300px;
+  height: 300px;
+  border: 2px solid white;
+  margin-bottom: 20px;
+}
+
+#center-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#center-logo {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.card-stacks {
+  display: flex;
+  gap: 20px;
+}
+
+.card-stack {
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
 button {
-    padding: 10px;
-    font-size: 1rem;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#dice-container {
+  margin-top: 10px;
+}
+
+.dice {
+  display: inline-block;
+  font-size: 40px;
+  margin: 5px;
 }
