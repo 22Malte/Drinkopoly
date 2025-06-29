@@ -14,19 +14,29 @@
       <button type="button" id="add-player">+ Spieler</button>
       <button type="submit">Spiel starten</button>
     </form>
+    <button id="clear-players">🚫 Spieler löschen</button>
   </div>
 
   <div id="game-screen" class="screen">
     <div id="top-bar">
       <div id="player-order"></div>
     </div>
-    <div id="board"></div>
+    <div id="board-container">
+      <div id="board"></div>
+    </div>
     <div id="dice-area">
       <div id="dice">
         <div class="die" id="die1">🎲</div>
         <div class="die" id="die2">🎲</div>
       </div>
       <button id="roll-dice">🎲 Würfeln</button>
+    </div>
+  </div>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <p id="popup-text"></p>
+      <button id="popup-close">✔️ Fertig</button>
     </div>
   </div>
 
