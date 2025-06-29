@@ -1,0 +1,62 @@
+{
+  "ereignis": [
+    {
+      "titel": "Shot-Zeit!",
+      "text": "{{spieler1}} trinkt 1 Shot und verteilt 1 Schluck an {{spieler2}}"
+    },
+    {
+      "titel": "Mix it!",
+      "text": "{{spieler2}} mixt {{spieler1}} ein Getränk, das er trinken muss"
+    },
+    {
+      "titel": "Du Opfer",
+      "text": "{{spieler1}} trinkt 2 Shots"
+    },
+    {
+      "titel": "Lustiger Tausch",
+      "text": "{{spieler1}} tauscht seinen Platz mit {{spieler2}}"
+    },
+    {
+      "titel": "Schicksalsschlag",
+      "text": "{{spieler1}} darf diese Runde nicht würfeln – 1 Shot als Strafe"
+    },
+    {
+      "titel": "Brudi Bonus",
+      "text": "{{spieler2}} darf einen Shot verschenken, {{spieler1}} muss trinken"
+    },
+    {
+      "titel": "Rückwärtsgang",
+      "text": "{{spieler1}} geht 3 Felder zurück und trinkt dabei 2 Schlücke"
+    }
+  ],
+  "gemeinschaft": [
+    {
+      "titel": "Cheers!",
+      "text": "Alle außer {{spieler1}} trinken 1 Schluck"
+    },
+    {
+      "titel": "Klein, aber oho",
+      "text": "Der kleinste Spieler (z. B. {{spieler1}}) trinkt 1 Shot"
+    },
+    {
+      "titel": "Ekelrunde",
+      "text": "{{spieler1}} gibt {{spieler2}} einen Spitznamen. Dann trinkt {{spieler2}} 2 Schlücke."
+    },
+    {
+      "titel": "Entscheidung",
+      "text": "{{spieler1}} entscheidet: 2 Shots oder 10 Sekunden Tanzen"
+    },
+    {
+      "titel": "Sympathie-Bonus",
+      "text": "{{spieler2}} entscheidet, ob {{spieler1}} trinken muss – oder selbst"
+    },
+    {
+      "titel": "Pantomime",
+      "text": "{{spieler1}} stellt einen Begriff pantomimisch dar. {{spieler2}} muss raten – bei Fail: beide trinken!"
+    },
+    {
+      "titel": "Aufwärmen",
+      "text": "Jeder sagt sein Lieblingsgetränk. Wer das gleiche wie {{spieler1}} hat, trinkt 1 Schluck"
+    }
+  ]
+}
