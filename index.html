@@ -7,21 +7,21 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="game-screen">
-    <div id="player-order"></div>
-    <div id="board"></div>
-    <div id="dice-area">
-      <button id="roll-dice">🎲 Würfeln</button>
-    </div>
+  <div id="setup-screen" class="screen active">
+    <h1>🍻 Drinkopoly</h1>
+    <form id="player-form">
+      <div id="player-inputs"></div>
+      <button type="button" id="add-player">+ Spieler</button>
+      <button type="submit">Spiel starten</button>
+    </form>
   </div>
 
-  <!-- Karten-Popup -->
-  <div id="card-popup" class="popup hidden">
-    <div class="popup-content">
-      <h2 id="card-title">Kartentitel</h2>
-      <p id="card-text">Kartentext</p>
-      <button id="card-done">✔️ Fertig</button>
+  <div id="game-screen" class="screen">
+    <div id="top-bar">
+      <div id="player-order"></div>
+      <button id="roll-dice">🎲 Würfeln</button>
     </div>
+    <div id="board"></div>
   </div>
 
   <script src="script.js"></script>
